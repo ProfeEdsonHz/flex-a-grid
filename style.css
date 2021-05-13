@@ -1,0 +1,39 @@
+* {
+	background-color: rgba(140, 27, 78, 0.12);
+
+
+}
+
+body {
+display: grid;
+grid-template: 
+"texto-area imagen-area" auto /
+40%			40%;
+justify-content: center;
+}
+
+.grupo-datos {
+	display: flex;
+	justify-content: space-around;
+}
+
+.texto {
+	grid-area:texto-area;
+} 
+
+.imagen {
+	grid-area:imagen-area;
+}
+
+@media (max-width: 400px){
+	body {
+		grid-template: 
+		"imagen-area" 40%
+		"texto-area" 40% /
+		80%;
+	}
+	.grupo-datos {
+		flex-direction: column;
+		align-items: center;
+	}
+}
